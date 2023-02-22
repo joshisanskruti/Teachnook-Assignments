@@ -1,0 +1,82 @@
+1. work on different data types with different examples on python.(list, tuple, set, dictionary)
+a. list.py
+numbers = [10,20,30,40,50]
+print(numbers)
+for number in numbers:
+    print(number)   
+print(numbers[0])
+print(numbers[2])
+print(numbers[4])
+
+b. tuple.py
+my_tuple = (1, 2, 3, 4, 5)
+print("First element of the tuple: ", my_tuple[0])
+print("Last element of the tuple: ", my_tuple[-1])
+print("Tuple elements from 2nd to 4th: ", my_tuple[1:4])
+
+
+c. set.py
+my_set = {1, 2, 3, 4, 5}
+print(my_set)
+my_set.add(6)
+print(my_set)
+
+d. dictionary.py
+user_details = {
+    "name": "Mona darling",
+    "age": 22,
+    "area": "Wednesday"
+}
+print(user_details)
+user_details_list = ["Mona", 22, "Wed"]
+print(user_details["age"])
+--------------------------------------------------------------------------------------------------------------------------
+2. work on 3 modes of files with different examples on python.(read, write, append)
+a. read()
+file = open("filename.txt", "r")
+content = file.read()
+print(content)
+file.close()
+
+b. write()
+file = open("filename.txt", "w")
+file.write("Hello, World!")
+file.close()
+
+c. append()
+with open('filename.txt', 'a') as f:
+    f.write('How are you?\n')
+--------------------------------------------------------------------------------------------------------------------------
+3. write a python program to make a simple calculator where the values are govern by user and the output will be stored in a file.
+def add(x, y):
+    return x + y
+def subtract(x, y):
+    return x - y
+def multiply(x, y):
+    return x * y
+def divide(x, y):
+    return x / y
+
+print("Select operation.")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+choice = input("Enter choice(1/2/3/4): ")
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+if choice == '1':
+    print(num1,"+",num2,"=", add(num1,num2))
+
+elif choice == '2':
+    print(num1,"-",num2,"=", subtract(num1,num2))
+
+elif choice == '3':
+    print(num1,"*",num2,"=", multiply(num1,num2))
+
+elif choice == '4':
+    print(num1,"/",num2,"=", divide(num1,num2))
+else:
+    print("Invalid input")
